@@ -1,0 +1,343 @@
+<html>
+<head>
+	<title>KaShop</title>
+	<link rel = "icon" type = "image/png" href = "images/icon.png"><!--TITLE ICON-->
+	<link rel="stylesheet" type="text/css" href="stylee.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"><!--NAVBAR-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--SOCIAL ICONS-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!--NAVBAR-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script><!--NAVBAR-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script><!--NAVBAR-->
+
+<script>
+      window.onscroll = function() { Scroll()};
+      function Scroll() {
+        if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+          document.getElementById("id-navi").className = "navi-slidedown";
+        }
+        if (document.body.scrollTop > 450 || document.documentElement.scrollTop > 450) {
+          document.getElementById("id-about-scroll").className = "scroll-about";
+        }
+      }
+
+      function menuButtonSnacks(){
+        document.getElementById("id-drinks").className = "menu-button-off";
+        document.getElementById("id-snacks").className = "menu-button-on";
+        document.getElementById("id-menu-snacks").className = "menu-snacks-on";
+        document.getElementById("id-menu-drinks").className = "menu-drinks-off";
+      }
+      function menuButtonDrinks(){
+        document.getElementById("id-drinks").className = "menu-button-on";
+        document.getElementById("id-snacks").className = "menu-button-off";
+        document.getElementById("id-menu-snacks").className = "menu-snacks-off";
+        document.getElementById("id-menu-drinks").className = "menu-drinks-on";
+      }
+    </script>
+
+</head>
+<body>
+<!--NAVBAR-->
+<div id="navbar">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+  <a class="navbar-brand" href="home.html"><img src="images/logo.png" width="100px"></a>
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="home.html#home">Home</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Shop</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="ayurvedic.php">Ayurvedic</a>
+        <a class="dropdown-item" href="breakfast.php">Breakfast</a>
+        <a class="dropdown-item" href="fashion.php">Beauty & Fashion</a>
+        <a class="dropdown-item" href="grains.php">Grains & Lentils</a>
+		<a class="dropdown-item" href="sports.php">Sports</a>
+		<a class="dropdown-item" href="fruits.php">Fruits & Vegetables</a>
+		<a class="dropdown-item" href="mobile.php">Mobile Accessories</a>
+		<a class="dropdown-item" href="laptop.php">Laptop Accessories</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="home.html#about">About</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="contact.php">Contact</a>
+    </li>
+  </ul>
+</nav>
+</div>
+<!--HOME-->
+
+<div id="home" class="home" style="background-image: linear-gradient(to bottom right, #fff, #8ED8FB); height: 750px;">
+	<img class="Slides" src="images/1.jpg" style="width:100%" height="84%">
+	<img class="Slides" src="images/2.jpg" style="width:100%" height="84%">
+	<img class="Slides" src="images/3.jpg" style="width:100%" height="84%">
+	<img class="Slides" src="images/4.jpg" style="width:100%" height="84%">
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("Slides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 1 second
+}
+</script>
+
+<center>
+<h1 style="color:#000">Welcome</h1>
+<p><h5 style="color:#000">This a official website of KaShop. Life is hard enough already, Let us make it a little easier. <br>An exciting place for the whole family to shop.</h5></p>
+</center>
+</div>
+
+<!--SHOP-->
+<div style="background-color:#E0E5EC; z-index: -1;" id="shop">
+<br>
+<h2><center>Our Products</center></h2>
+
+<section class="menu-header-container">
+  <div class="menu-hr-container"><hr class="menu-hr"></div>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <button type="button" id="id-drinks" class="menu-button-on" onclick="menuButtonDrinks()"><img src="images/left.jpg" class="menu-circle-image"></button>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <button type="button" id="id-snacks" class="menu-button-off" onclick="menuButtonSnacks()"><img src="images/right.jpg" class="menu-circle-image"></button>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <div class="menu-hr-container"><hr class="menu-hr"></div>
+</section>
+
+<div class="menu-drinks-on" id="id-menu-drinks">
+
+<section class="menu" style="display: inline;">
+    <article class="menu-section">
+      <!-- first column -->
+      <div class="menu-flip-card">
+        <div class="menu-flip-card-inner">
+          <div class="menu-flip-card-front">
+            <img src="ayurvedic/ayurvedic.jpg" alt="Avatar" class="menu-image">
+          </div>
+          <div class="menu-flip-card-back">
+            <div class="menu-text"><h3 class="menu-text-title">AYURVEDIC</h3>
+              <p class="about-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+                dolores.
+              </p>
+              <button class="enquiry-button"><a href="ayurvedic.php">Show More..</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- second column -->
+    <article class="menu-section">
+      <div class="menu-flip-card">
+        <div class="menu-flip-card-inner">
+          <div class="menu-flip-card-front">
+            <img src="breakfast/breakfast.jpg" alt="Avatar" class="menu-image">
+          </div>
+          <div class="menu-flip-card-back">
+            <div class="menu-text"><h3 class="menu-text-title">BREAKFAST</h3>
+              <p class="about-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+                dolores.
+              </p>
+              <button class="enquiry-button"><a href="breakfast.php">Show More..</a></button>        
+          </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- third column -->
+    <article class="menu-section">
+      <div class="menu-flip-card">
+        <div class="menu-flip-card-inner">
+          <div class="menu-flip-card-front">
+            <img src="fashion/fashion.jpg" alt="Avatar" class="menu-image">
+          </div>
+          <div class="menu-flip-card-back">
+            <div class="menu-text"><h3 class="menu-text-title">BEAUTY & FASHION</h3>
+              <p class="about-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+                dolores.
+              </p>
+             <button class="enquiry-button"><a href="fashion.php">Show More..</a></button>           
+          </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- fourth column -->
+    <article class="menu-section">
+      <div class="menu-flip-card">
+        <div class="menu-flip-card-inner">
+          <div class="menu-flip-card-front">
+            <img src="grains/grains.jpg" alt="Avatar" class="menu-image">
+          </div>
+          <div class="menu-flip-card-back">
+            <div class="menu-text"><h3 class="menu-text-title">GRAINS AND LENTILS</h3>
+              <p class="about-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+                dolores.
+              </p>
+              <button class="enquiry-button"><a href="grains.php">Show More..</a></button>            
+          </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div style="clear: both;"></div>
+    <br>
+  </section>
+  <br>
+</div>
+
+<!-- snacks menu -->
+<div class="menu-snacks-off" id="id-menu-snacks">
+
+  <section class="menu" style="display: inline;">
+    <article class="menu-section">
+      <!-- first column -->
+      <div class="menu-flip-card">
+        <div class="menu-flip-card-inner">
+          <div class="menu-flip-card-front">
+            <img src="sports/sports.jpg" alt="Avatar" class="menu-image">
+          </div>
+          <div class="menu-flip-card-back">
+            <div class="menu-text"><h3 class="menu-text-title">SPORTS</h3>
+              <p class="about-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+                dolores.
+              </p>
+              <button class="enquiry-button"><a href="sports.php">Show More..</a></button>            
+          </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- second column -->
+    <article class="menu-section">
+      <div class="menu-flip-card">
+        <div class="menu-flip-card-inner">
+          <div class="menu-flip-card-front">
+            <img src="vegetables/vegetables.jpg" alt="Avatar" class="menu-image">
+          </div>
+          <div class="menu-flip-card-back">
+            <div class="menu-text"><h3 class="menu-text-title">FRUITS AND VEGETABLES</h3>
+              <p class="about-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+                dolores.
+              </p>
+              <button class="enquiry-button"><a href="vegetables.php">Show More..</a></button>            
+          </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- third column -->
+    <article class="menu-section">
+      <div class="menu-flip-card">
+        <div class="menu-flip-card-inner">
+          <div class="menu-flip-card-front">
+            <img src="mobile/headphone.jpg" alt="Avatar" class="menu-image">
+          </div>
+          <div class="menu-flip-card-back">
+            <div class="menu-text"><h3 class="menu-text-title">MOBILE ACCESSORIES</h3>
+              <p class="about-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+                dolores.
+              </p>
+              <button class="enquiry-button"><a href="headphone.php">Show More..</a></button>            
+          </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- fourth column -->
+    <article class="menu-section">
+      <div class="menu-flip-card">
+        <div class="menu-flip-card-inner">
+          <div class="menu-flip-card-front">
+            <img src="laptop/laptop.jpg" alt="Avatar" class="menu-image">
+          </div>
+          <div class="menu-flip-card-back">
+            <div class="menu-text"><h3 class="menu-text-title">LAPTOP ACCESSORIES</h3>
+              <p class="about-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+                dolores.
+              </p>
+              <button class="enquiry-button"><a href="laptop.php">Show More..</a></button>            
+          </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div style="clear: both;"></div>
+    <br>
+  </section>
+    <br>
+  </div><hr>
+  <!-- snacks menu ending -->
+</div>
+
+<!--ABOUT-->
+<div class="about" id="about">
+  <br><br><h2><center>Find Us &#128270;</center></h2>
+
+    <section class="about-section-center-clearfix" style="display: inline; ">
+
+      <article class="findUs-map">
+      <!--left column-->
+      <br>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29814.98035516466!2d70.3416405285634!3d20.917446907747347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bfd32308996ab5b%3A0xf285471b09bfa777!2sVeraval%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1593443116855!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" ></iframe>
+      <br><br>
+      </article>
+      <!-- right column -->
+      <article class="findUs-img">
+       <!-- second column -->
+        <br>
+        <!-- section title -->
+        <div class="opening-container">
+          <div class="opening-text ">
+            <h3>O P E N&nbsp;&nbsp;H O U R S &#x23F3;</h3>
+              <p>
+                <strong>Monday: Closed</strong><br>
+                <strong>Tuesday to Friday</strong><br>
+                7:00 AM - 9:00 PM<br>
+                <strong>Saturday & Sunday</strong><br>
+                11:00 AM - 10:00 PM
+              </p>
+          </div>
+        </div>
+        
+        <!--end section title -->
+      </article>
+      <div style="clear: both;"></div>
+    </section>
+    <center>
+    <div class="findUs-social">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#" title="Facebook"><i class="fa fa-facebook-official" style="font-size:36px"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#" title="Instagram"><i class="fa fa-instagram" style="font-size:36px"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#" title="LinkedIn"><i class="fa fa-linkedin-square" style="font-size:36px"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#" title="Google"><i class="fa fa-google" style="font-size:36px"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#" title="GitHub"><i class="fa fa-github" style="font-size:36px"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </div><br>
+    <h5 class="fontsettings">Copyright © 2020 | KaShop</h5><br><br>
+  </center>
+  </div>
+
+</body>
+</html>
