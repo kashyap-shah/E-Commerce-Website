@@ -508,7 +508,7 @@ $sql = "INSERT INTO enquirytable(p_name, name, email, number) VALUES ('$p_name',
     <a href="#" title="Google"><i class="fa fa-google" style="font-size:36px"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="#" title="GitHub"><i class="fa fa-github" style="font-size:36px"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </div><br>
-    <h5 class="fontsettings">Copyright © 2020 | KaShop</h5><br><br>
+    <h5 class="fontsettings">Copyright © <script>document.write(new Date().getFullYear())</script> | KaShop</h5><br><br>
   </center>
   </div>
 
